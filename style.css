@@ -60,7 +60,7 @@ body {
 .horizontalArrows {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 20px ; /* Separación horizontal de 15px entre las flechas izquierda y derecha */
 }
 
 .arrow {
@@ -70,11 +70,13 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 15px; /* Separación vertical de 15px entre las flechas de arriba y abajo */
 }
 
 .arrow:active {
     background-color: #ccc;
 }
+
 
 .square {
     aspect-ratio: 1; /* Asegura que cada cuadrado sea un cuadrado perfecto */
