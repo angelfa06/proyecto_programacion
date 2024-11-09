@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
-    <title>Document</title>
+    <title>Snake Game</title>
 </head>
 <body>
     <div id="board"></div>
     <div class="boardInfo">
         <div>
-          <div id="scoreBoard"></div>
+            <div id="scoreBoard"></div>
         </div>
-     <button id="start">start</button>
+        <button id="start">Start</button>
+    </div>
+    <div id="controls">
+        <button class="arrow" id="arrowUp">⬆️</button>
+        <div class="horizontalArrows">
+            <button class="arrow" id="arrowLeft">⬅️</button>
+            <button class="arrow" id="arrowRight">➡️</button>
+        </div>
+        <button class="arrow" id="arrowDown">⬇️</button>
     </div>
     <div id="gameOver">Game Over</div>
 </body>
