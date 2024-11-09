@@ -1,51 +1,96 @@
 * {
     font-family: 'Share Tech Mono', monospace;
+    box-sizing: border-box;
 }
 
-#board, .boardInfo {
-    max-width: 500px;
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
 }
 
 #board {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-}
-
-#start, .boardInfo {
-    font-size: 25px;
-}
-
-#gameOver {
-    display: none;
-}
-
-.boardInfo {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2px;
+    width: 65vmin; /* Hace que el tablero sea un cuadrado grande basado en el lado más corto de la ventana */
+    height: 65vmin; /* Hace que el tablero sea un cuadrado grande basado en el lado más corto de la ventana */
 }
 
 #start {
     background-color: #f35a69;
     border: none;
     color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#gameOver {
+    display: none;
+    font-size: 24px;
+    color: red;
+    margin-top: 20px;
+}
+
+.boardInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
 }
 
 #scoreBoard {
-    display: inline-flex;
+    font-size: 20px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.horizontalArrows {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.arrow {
+    background-color: #ddd;
+    border: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.arrow:active {
+    background-color: #ccc;
 }
 
 .square {
-    aspect-ratio: 1;
-}
-
-.emptySquare {
+    aspect-ratio: 1; /* Asegura que cada cuadrado sea un cuadrado perfecto */
     background-color: #6d71b5;
 }
 
 .snakeSquare {
     background-color: #e3e773;
     border: 1px solid #000;
+}
+
+.foodSquare {
+    background-color: #55e7e7;
+    border: 1px solid #000;
+}
+
 }
 
 .foodSquare {
