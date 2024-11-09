@@ -153,3 +153,14 @@ const startGame = () => {
 }
 
 startButton.addEventListener('click', startGame);
+
+//FLechas
+const arrowUp = document.getElementById('arrowUp');
+const arrowDown = document.getElementById('arrowDown');
+const arrowLeft = document.getElementById('arrowLeft');
+const arrowRight = document.getElementById('arrowRight');
+
+arrowUp.addEventListener('click', () => direction !== 'ArrowDown' && setDirection('ArrowUp'));
+arrowDown.addEventListener('click', () => direction !== 'ArrowUp' && setDirection('ArrowDown'));
+arrowLeft.addEventListener('click', () => direction !== 'ArrowRight' && setDirection('ArrowLeft'));
+arrowRight.addEventListener('click', () => direction !== 'ArrowLeft' && setDirection('ArrowRight'));
