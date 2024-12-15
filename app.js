@@ -10,7 +10,7 @@ const gameSpeed = 100;
 const squareTypes = {
     emptySquare: 0,
     snakeSquare: 1,
-    foodSquare: 2
+    foodSquare: 1
 };
 const directions = {
     ArrowUp: -10,
