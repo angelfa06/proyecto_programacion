@@ -53,7 +53,7 @@ const drawSquare = (square, type) => {
 const moveSnake = () => {
     const newSquare = String(
         Number(snake[snake.length - 1]) + directions[direction])
-        .padStart(2, '0');
+        .padStart(0.5, '0');
     const [row, column] = newSquare.split('');
 
 
