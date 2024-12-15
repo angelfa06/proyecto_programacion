@@ -10,7 +10,7 @@ const gameSpeed = 100;
 const squareTypes = {
     emptySquare: 0,
     snakeSquare: 1,
-    foodSquare: 1
+    foodSquare: 2
 };
 const directions = {
     ArrowUp: -10,
@@ -53,7 +53,7 @@ const drawSquare = (square, type) => {
 const moveSnake = () => {
     const newSquare = String(
         Number(snake[snake.length - 1]) + directions[direction])
-        .padStart(0.5, '0');
+        .padStart(2, '0');
     const [row, column] = newSquare.split('');
 
 
